@@ -110,6 +110,7 @@ var view = {
         for(let i = 0; i<viewDOM.catsItems().length;i++){
             viewDOM.catsItems()[i].addEventListener('click',function(){
                 viewDOM.area().style.display = "block";
+                viewDOM.area_formCon().innerHTML ='';
                 octopus.setCurrentCat(i);
                 viewDOM.area_catName().textContent = currentCat.getName();
                 viewDOM.area_catImg().src = currentCat.getImage();

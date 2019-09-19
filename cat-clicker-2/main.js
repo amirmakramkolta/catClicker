@@ -15,7 +15,7 @@ var ViewModel = function(){
         }
         return level;
     },this);
-    this.nickNames = ko.observableArray([]);
+    this.nickNames = ko.observableArray([['wow','pew','lol','Mr. Meow']]);
 }
 
 ko.applyBindings(new ViewModel());

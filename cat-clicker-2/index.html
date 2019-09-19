@@ -12,6 +12,10 @@
     <h2 data-bind="text: levelChange"></h2>
     <p data-bind="text: clickCounter"></p>
     <img src="" alt="cute cat" data-bind="attr: {src:image}, click:imageClicked">
+    <h3>Nicknames</h3>
+    <ul data-bind="foreach: nickNames">
+        <li data-bind="text: $data"></li>
+    </ul>
     <script type="text/javascript" src="knockout.js"></script>
     <script src="main.js"></script>
 </body>

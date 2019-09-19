@@ -8,14 +8,20 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1 data-bind="text: name"></h1>
-    <h2 data-bind="text: levelChange"></h2>
-    <p data-bind="text: clickCounter"></p>
-    <img src="" alt="cute cat" data-bind="attr: {src:image}, click:imageClicked">
-    <h3>Nicknames</h3>
-    <ul data-bind="foreach: nickNames">
-        <li data-bind="text: $data"></li>
+    <h1>Select Your Cat:</h1>
+    <ul data-bind="foreach: catList">
+        <li data-bind="text: name, click: $parent.setCat"></li>
     </ul>
+    <div data-bind="with: currentCat">
+        <h1 data-bind="text: name"></h1>
+        <h2 data-bind="text: levelChange"></h2>
+        <p data-bind="text: clickCounter"></p>
+        <img src="" alt="cute cat" data-bind="attr: {src:image}, click:$parent.imageClicked">
+        <h3>Nicknames</h3>
+        <ul data-bind="foreach: nickNames">
+            <li data-bind="text: $data"></li>
+        </ul>
+    </div>
     <script type="text/javascript" src="knockout.js"></script>
     <script src="main.js"></script>
 </body>
